@@ -1,0 +1,61 @@
+# ===== Gradle =====
+.gradle/
+build/
+app/build/
+captures/
+*.iml
+local.properties
+
+# ===== Signing keys (NEVER commit) =====
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.crt
+*.key
+keystore/
+signing.properties
+
+# ===== Build artifacts =====
+bin/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.jar
+*.exe
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.iml
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ===== Logs & temp =====
+*.log
+*.bak
+*.old
+*.tmp
+*.temp
+
+# ===== Environment & secrets =====
+.env
+.env.*
+*.properties.bak
+secrets.*
+
+# ===== Internal handover doc (contains local passwords/paths) =====
+交接说明.md

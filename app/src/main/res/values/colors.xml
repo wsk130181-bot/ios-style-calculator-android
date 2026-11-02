@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ios_digit">#333333</color>
+    <color name="ios_digit_pressed">#737373</color>
+    <color name="ios_fn">#A5A5A5</color>
+    <color name="ios_fn_pressed">#C4C4C4</color>
+    <color name="ios_op">#FF9F0A</color>
+    <color name="ios_op_pressed">#C98A0A</color>
+    <color name="ios_white">#FFFFFF</color>
+    <color name="ios_black">#000000</color>
+</resources>

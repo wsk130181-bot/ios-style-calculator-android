@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:padding="6dp">
+
+    <TextView
+        android:id="@+id/tvPending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end|bottom"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="4dp"
+        android:textColor="#66FFFFFF"
+        android:textSize="22sp"
+        android:text=""
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="end|bottom"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="4dp"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        android:text="0"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 左侧：科学函数面板 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.15"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btnSin" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="sin" android:textColor="#FFFFFF" android:textSize="20sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="sin" android:onClick="onKey" />
+                <Button android:id="@+id/btnCos" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="cos" android:textColor="#FFFFFF" android:textSize="20sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="cos" android:onClick="onKey" />
+                <Button android:id="@+id/btnTan" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="tan" android:textColor="#FFFFFF" android:textSize="20sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="tan" android:onClick="onKey" />
+                <Button android:id="@+id/btnLn" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="ln" android:textColor="#FFFFFF" android:textSize="20sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="ln" android:onClick="onKey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btnLog" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="log" android:textColor="#FFFFFF" android:textSize="20sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="log" android:onClick="onKey" />
+                <Button android:id="@+id/btnSqrt" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="√" android:textColor="#FFFFFF" android:textSize="22sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="√" android:onClick="onKey" />
+                <Button android:id="@+id/btnX2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="x²" android:textColor="#FFFFFF" android:textSize="20sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="x²" android:onClick="onKey" />
+                <Button android:id="@+id/btnX3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="x³" android:textColor="#FFFFFF" android:textSize="20sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="x³" android:onClick="onKey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btnInv" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="⅟x" android:textColor="#FFFFFF" android:textSize="20sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="⅟x" android:onClick="onKey" />
+                <Button android:id="@+id/btnPi" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="π" android:textColor="#FFFFFF" android:textSize="22sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="π" android:onClick="onKey" />
+                <Button android:id="@+id/btnE" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="e" android:textColor="#FFFFFF" android:textSize="22sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="e" android:onClick="onKey" />
+                <Button android:id="@+id/btnRand" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="rand" android:textColor="#FFFFFF" android:textSize="18sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="rand" android:onClick="onKey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btnOp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="(" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="(" android:onClick="onKey" />
+                <Button android:id="@+id/btnCp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text=")" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag=")" android:onClick="onKey" />
+                <Button android:id="@+id/btnEE" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_sci" android:text="EE" android:textColor="#FFFFFF" android:textSize="18sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="EE" android:onClick="onKey" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 右侧：经典按键盘 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.85"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/lbtnAC" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_fn" android:text="AC" android:textColor="#000000" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="AC" android:onClick="onKey" />
+                <Button android:id="@+id/lbtnNeg" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_fn" android:text="±" android:textColor="#000000" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="±" android:onClick="onKey" />
+                <Button android:id="@+id/lbtnPct" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_fn" android:text="%" android:textColor="#000000" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="%" android:onClick="onKey" />
+                <Button android:id="@+id/lbtnDiv" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_op" android:text="÷" android:textColor="#FFFFFF" android:textSize="26sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="÷" android:onClick="onKey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/lbtn7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="7" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="7" android:onClick="onKey" />
+                <Button android:id="@+id/lbtn8" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="8" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="8" android:onClick="onKey" />
+                <Button android:id="@+id/lbtn9" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="9" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="9" android:onClick="onKey" />
+                <Button android:id="@+id/lbtnMul" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_op" android:text="×" android:textColor="#FFFFFF" android:textSize="26sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="×" android:onClick="onKey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/lbtn4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="4" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="4" android:onClick="onKey" />
+                <Button android:id="@+id/lbtn5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="5" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="5" android:onClick="onKey" />
+                <Button android:id="@+id/lbtn6" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="6" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="6" android:onClick="onKey" />
+                <Button android:id="@+id/lbtnSub" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_op" android:text="−" android:textColor="#FFFFFF" android:textSize="26sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="−" android:onClick="onKey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/lbtn1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="1" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="1" android:onClick="onKey" />
+                <Button android:id="@+id/lbtn2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="2" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="2" android:onClick="onKey" />
+                <Button android:id="@+id/lbtn3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="3" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="3" android:onClick="onKey" />
+                <Button android:id="@+id/lbtnAdd" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_op" android:text="+" android:textColor="#FFFFFF" android:textSize="26sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="+" android:onClick="onKey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+                <Button android:id="@+id/lbtn0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" android:layout_margin="3dp" android:background="@drawable/btn_num_wide" android:text="0" android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="0" android:onClick="onKey" />
+                <Button android:id="@+id/lbtnDot" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_num" android:text="." android:textColor="#FFFFFF" android:textSize="24sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="." android:onClick="onKey" />
+                <Button android:id="@+id/lbtnEq" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/btn_op" android:text="=" android:textColor="#FFFFFF" android:textSize="26sp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:tag="=" android:onClick="onKey" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

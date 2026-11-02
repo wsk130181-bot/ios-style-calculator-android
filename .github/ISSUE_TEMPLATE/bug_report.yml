@@ -1,0 +1,96 @@
+name: Bug Report / 缺陷报告
+description: Report a bug to help us improve / 报告缺陷以帮助我们改进
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        感谢您花时间填写缺陷报告！
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug / 描述缺陷
+      description: A clear and concise description of what the bug is.
+      placeholder: When I do X, Y happens instead of Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Open the app
+        2. Press '5'
+        3. Press '+'
+        4. Press '='
+        5. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / 预期行为
+      description: What did you expect to happen?
+      placeholder: I expected the result to be 10.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior / 实际行为
+      description: What actually happened?
+      placeholder: The app crashed / showed "错误" / displayed wrong result.
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device / 设备
+      description: What device are you using?
+      placeholder: e.g., Samsung Galaxy S23, Pixel 7
+    validations:
+      required: false
+
+  - type: input
+    id: android-version
+    attributes:
+      label: Android version / Android 版本
+      description: What Android version is running?
+      placeholder: e.g., Android 14
+    validations:
+      required: false
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App version / App 版本
+      description: What version of the app are you using?
+      placeholder: e.g., 1.0.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / 截图
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: Drag and drop images here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context / 其他信息
+      description: Add any other context about the problem here.
+      placeholder: Logs, device orientation (portrait/landscape), etc.
+    validations:
+      required: false
